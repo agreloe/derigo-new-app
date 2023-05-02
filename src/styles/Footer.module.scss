@@ -1,0 +1,13 @@
+@import 'Variables';
+
+.footer {
+    @include small-screen {
+        ul {
+            li {
+                span {
+                    font-size: .7rem;
+                }
+            }
+        }
+    }
+}

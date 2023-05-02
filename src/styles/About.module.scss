@@ -1,0 +1,54 @@
+@import 'Variables';
+
+.about {
+
+    &__title {
+        .line {
+            width: 0px;
+            height: 3px;
+            background-color: $secondary-color;
+            display: block;
+        }
+    }
+
+    &__text {
+        width: 50%;
+
+        li {
+            padding: 1rem 1rem 1rem 1.5rem;
+            position: relative;
+
+            &:first-child {
+                padding-top: 0px;
+            }
+        }
+
+        li::before {
+            content: '';
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 40%;
+            left: -1rem;
+            background-color: $secondary-color;
+            clip-path: polygon(60% 15%, 100% 50%, 60% 85%, 50% 85%, 90% 50%, 50% 15%);
+        }
+
+        li a {
+            text-decoration: none;
+            color: $secondary-color;
+        }
+    }
+
+    @include small-screen {
+        &__text {
+            width: 100%;
+        }
+    }
+
+    @include medium-screen {
+        &__title {
+            width: 40%;
+        }
+    }
+}

@@ -1,0 +1,104 @@
+@import 'Variables';
+
+.carousel {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+
+    &__inner {
+        white-space: nowrap;
+        transition: $transition;
+
+        &__item {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background-repeat: no-repeat;
+            background-position: 50%;
+            background-size: cover;
+            position: relative;
+
+            &__text {
+                background-color: $primary-color;
+                padding: .5rem 1rem;
+                opacity: 0;
+                transition: $transition;
+                transform: translateY(25px);
+                -webkit-transform: translateY(25px);
+                -moz-transform: translateY(25px);
+                -ms-transform: translateY(25px);
+                -o-transform: translateY(25px);
+            }
+
+            &:hover &__text {
+                opacity: 1;
+                transform: translateY(0px);
+                -webkit-transform: translateY(0px);
+                -moz-transform: translateY(0px);
+                -ms-transform: translateY(0px);
+                -o-transform: translateY(0px);
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: fit-content;
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+
+        &__body {
+            width: fit-content;
+
+            h1 ,p {
+                padding: .5rem 1rem;
+                color: $text-color-contrast;
+            }
+        }
+
+        &__arrow {
+            border: 0;
+            background: transparent;
+            color: white;
+            outline: none;
+            font-size: 2rem;
+            transition: $transition;
+            margin-left: 1rem;
+        }
+
+        &__arrow:last-child {
+            margin-left: 0px;
+            margin-right: 1rem;
+        }
+
+        &__arrow:hover {
+            color: rgba(255,255,255,.5);
+        }
+    }
+
+    @include small-screen {
+        &__content {
+            &__body {
+                width: 250px;
+            }
+
+            &__arrow {
+                margin-left: .5rem;
+            }
+
+            &__arrow:last-child {
+                margin-right: .5rem;
+            }
+        }
+    }
+}

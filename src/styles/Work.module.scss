@@ -1,0 +1,16 @@
+@import 'Variables';
+
+.work {
+    background: linear-gradient(180deg, $primary-color 60%, $text-color-contrast 60%);
+
+    h2, p {
+        color: $text-color-contrast;
+    }
+
+    .line {
+        width: 0px;
+        height: 3px;
+        background-color: $secondary-color;
+        display: block;
+    }
+}

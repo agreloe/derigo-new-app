@@ -1,0 +1,131 @@
+@import 'Variables';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap');
+
+@font-face {
+  font-family: "Optician Sans";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../assets/font/Optician-Sans\ \(1\).woff") format("woff"), url("../assets/font/Optician-Sans.ttf") format("truetype");
+}
+
+:root {
+  @include body($paragraph, $text-color);
+  scroll-padding-top: 4rem;
+}
+
+body {
+  background-color: $text-color-contrast;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: $navHeight;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  z-index: -1;
+  transition: $transition;
+}
+
+body.opacity::after {
+  opacity: 1;
+  z-index: 10;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overscroll-behavior: none;
+}
+
+h1 {
+  @include title($header1);
+}
+
+h2 {
+  @include title($header2);
+  padding-bottom: 1rem;
+}
+
+h3 {
+  @include title($header3);
+}
+
+h4 {
+  @include title($header4);
+}
+
+h5 {
+  @include title($header5);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+ul {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+ul {
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:visited {
+      color: inherit;
+  }
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.button {
+  @include button($primary-color, #fff);
+}
+
+@include small-screen {
+  h1 {
+    font-size: $header3;
+  }
+  h2 {
+    font-size: $header4;
+  }
+  h3 {
+    font-size: $header5;
+  }
+  h4 {
+    font-size: $header5;
+  }
+  h5 {
+    font-size: $paragraph;
+  }
+}

@@ -1,0 +1,95 @@
+// Colors
+$primary-color: hsl(232, 45%, 44%);
+$secondary-color: hsl(133, 100%, 37%);
+$text-color: hsl(0, 0%, 20%);
+$text-color-contrast: hsl(240, 100%, 99%);
+$shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+$shadow-hover: 0 5px 30px rgba(0, 0, 0, 0.1);
+$transition: all 300ms ease-out;
+
+// TypeScale
+$header1: 4.209rem;
+$header2: 3.157rem;
+$header3: 2.369rem;
+$header4: 1.777rem;
+$header5: 1.333rem;
+$paragraph: 1rem;
+$primary-font: 'Optician Sans', monospace;
+$secondary-font: 'Manrope', sans-serif;
+$navHeight: 80px;
+
+// Mixins
+@mixin title($size) {
+    font-family: $primary-font;
+    color: $primary-color;
+    font-size: $size;
+    line-height: 3rem;
+}
+
+@mixin body($size, $color) {
+    font-family: $secondary-font;
+    color: $color;
+    font-size: $size;
+}
+
+@mixin button($bgColor, $textColor) {
+    background-color: $bgColor;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    color: $textColor;
+    padding: .5rem 2rem;
+    width: fit-content;
+    transition: $transition;
+
+    &:hover {
+        background-color: $secondary-color;
+    }
+
+}
+
+@mixin buttonInverted($borderColor, $textColor) {
+    border: 1px solid $borderColor;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    color: $textColor;
+    padding: .5rem 2rem;
+    width: fit-content;
+    transition: $transition;
+
+    &:hover {
+        border: 1px solid $secondary-color;
+    }
+
+}
+
+
+// Media Querys
+@mixin small-screen {
+    @media (max-width: 767.9px) {
+        @content;
+    }
+}
+
+@mixin medium-screen {
+    @media (min-width: 768px) and (max-width: 1439.9px) {
+        @content;
+    }
+}
+
+@mixin large-screen {
+    @media (min-width: 1440px) {
+        @content;
+    }
+}
+
+@mixin xl-screen {
+    @media (min-width: 1920px) {
+        @content;
+    }
+}
