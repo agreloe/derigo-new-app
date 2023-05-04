@@ -1,6 +1,6 @@
 import React, {useState, Children, cloneElement, useRef} from 'react'
 import styles from '@/styles/Carousel.module.scss'
-import { gsap, Expo } from "gsap";
+import { gsap, Expo } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import useIsomorphicLayoutEffect from '@/utils/isomorphicLayoutEffect';
 import SplitType from 'split-type'
@@ -40,7 +40,6 @@ export default function Carousel({children, slides, width, text, description}) {
                 y: 0,
                 opacity: 1,
                 stagger: 0.25,
-                //duration: 1,
                 ease: Expo.easeOut
               }
             )
@@ -93,7 +92,7 @@ export default function Carousel({children, slides, width, text, description}) {
               <button className={`${styles["carousel__content__arrow"]}`} type="button" style={{opacity: showLeft ? 1 : 0}} onClick={()=>{updateIndex(activeIndex - 1);}}>&#8249;</button>
               {
                 text && (
-                    <div className={`${styles['carousel__content__body']} text-left sm:text-center`}>
+                    <div className={`${styles['carousel__content__body']} text-center`}>
 
                         <h1 className='title'>{text}</h1>
                         <p className='description'>{description}</p>

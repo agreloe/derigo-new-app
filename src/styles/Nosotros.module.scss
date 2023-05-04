@@ -1,0 +1,33 @@
+@import 'Variables';
+
+.nosotros {
+    .img {
+        width: 50%;
+        height: auto;
+    }
+
+    .card {
+        min-height: 350px;
+        padding: 2rem;
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+
+        &:first-child {
+            @include bg-color(0.5);
+        }
+        &:nth-child(2) {
+            @include bg-color(0.3);
+        }
+        &:nth-child(3) {
+            @include bg-color(0.1);
+        }
+    }
+
+    @include small-screen {
+        .img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

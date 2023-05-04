@@ -1,18 +1,20 @@
 @import 'Variables';
 
 .header {
-    box-shadow: $shadow;
-    background-color: $text-color-contrast;
-    overflow-x: hidden;
-    z-index: 1000;
-    width: 100%;
-    position: fixed;
-    height: $navHeight;
-    top: 0;
-    transition: $transition;
+    .wrap {
+        box-shadow: $shadow;
+        background-color: $text-color-contrast;
+        overflow-x: hidden;
+        z-index: 1000;
+        width: 100%;
+        position: fixed;
+        height: $navHeight;
+        top: 0;
+        transition: $transition;
 
-    &.hidden {
-        top: -80px;
+        &.hidden {
+            top: -$navHeight;
+        }
     }
 
     ul {

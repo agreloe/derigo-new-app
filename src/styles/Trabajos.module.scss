@@ -1,0 +1,99 @@
+@import 'Variables';
+
+.trabajos {
+
+    .box {
+        border-bottom: 1px solid $primary-color;
+
+
+        &__title {
+            h4 {
+                padding: 1rem;
+                /* display: flex;
+                justify-content: space-between; */
+                position: relative;
+
+
+
+            &::after {
+                content: '\276F';
+                width: 20px;
+                height: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                right: .5rem;
+                font-size: 1rem;
+                transform-origin: center;
+                transform: rotateZ(90deg);
+                transition: $transition;
+                -webkit-transition: $transition;
+                -moz-transition: $transition;
+                -ms-transition: $transition;
+                -o-transition: $transition;
+                top: 40%;
+                bottom: 50%;
+            }
+        }
+
+        &.rotate {
+            h4 {
+
+                &::after {
+                    transform: rotateZ(-90deg);
+                }
+            }
+        }
+        }
+
+        &__content {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            transform-origin: top center;
+            height: 0px;
+            opacity: 0;
+            transition: $transition;
+            padding-left: 1rem;
+            padding-right: 1rem;
+
+            p {
+
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            &__img {
+                transition: $transition;
+            }
+
+            &.active {
+                transition: $transition;
+                height: auto;
+                opacity: 1;
+                padding-bottom: 2rem;
+
+                p {
+                    opacity: 1;
+                    transform: translateY(0px);
+                    transition: $transition;
+                }
+
+                .box__content__img {
+                    width: auto;
+                    height: 300px;
+                    transition: $transition;
+                    transform-origin: 0 100%;
+                    transform-style: preserve-3d;
+                }
+            }
+
+            @include small-screen {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+        }
+    }
+}

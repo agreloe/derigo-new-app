@@ -25,7 +25,7 @@ body {
 body::after {
   content: "";
   position: fixed;
-  top: $navHeight;
+  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
@@ -108,24 +108,56 @@ a {
   padding-right: 2rem;
 }
 
+.subtitle {
+  @include subtitle($paragraph);
+}
+
 .button {
   @include button($primary-color, #fff);
 }
 
+.line {
+  @include line($secondary-color);
+}
+
 @include small-screen {
+
   h1 {
     font-size: $header3;
   }
   h2 {
-    font-size: $header4;
+    font-size: $header3;
   }
   h3 {
-    font-size: $header5;
+    font-size: $header4;
   }
   h4 {
     font-size: $header5;
+    line-height: 2rem;
   }
   h5 {
     font-size: $paragraph;
+    line-height: 2rem;
+  }
+}
+
+@include medium-screen {
+
+  h1 {
+    font-size: $header2;
+  }
+  h2 {
+    font-size: $header3;
+  }
+  h3 {
+    font-size: $header4;
+  }
+  h4 {
+    font-size: $header5;
+    line-height: 2rem;
+  }
+  h5 {
+    font-size: $paragraph;
+    line-height: 2rem;
   }
 }

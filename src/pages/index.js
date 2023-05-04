@@ -4,6 +4,8 @@ import Banner from "@/components/home/Banner"
 import About from "@/components/home/About"
 import Work from "@/components/home/Work"
 import Contact from "@/components/home/Contact"
+import Nosotros from "@/components/home/Nosotros"
+import Trabajos from "@/components/home/Trabajos"
 
 export default function Home() {
   return (
@@ -30,8 +32,8 @@ export default function Home() {
           />
       </ScrollRestorationDisabler>
       <Banner />
-      <About />
-      <Work />
+      <Nosotros />
+      <Trabajos />
       <Contact />
     </Fragment>
   )

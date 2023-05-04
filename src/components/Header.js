@@ -3,9 +3,21 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from '@/styles/Header.module.scss'
 import logo from '@/assets/img/Derigo_logo_Redesign.svg'
+import useIsomorphicLayoutEffect from "@/utils/isomorphicLayoutEffect";
 
 export default function Header() {
-    const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(false);
+  const [visible, setVisible] = useState(true);
+  const [clientWindowHeight, setClientWindowHeight] = useState(window.scrollY);
+
+  const handleScroll = () => {
+    if (typeof window !== 'undefined') {
+      const currentScrollY = window.scrollY;
+      const isVisible = clientWindowHeight > currentScrollY
+      setClientWindowHeight(window.scrollY);
+      setVisible(isVisible)
+    }
+  };
 
   const openMenu = () => {
     setToggle(!toggle);
@@ -24,8 +36,16 @@ export default function Header() {
     }
   };
 
+  useIsomorphicLayoutEffect(()=>{
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  },[clientWindowHeight])
+
+
+
   return (
     <header className={`${styles.header}`}>
+      <div className={`${styles.wrap} ${visible ? '' : styles.hidden}`}>
         <nav className="py-2 px-4 flex justify-between min-h-[80px]">
         <Link href="/" className="flex items-center gap-4">
           <Image src={logo} width={75} height={75} alt="/"></Image>
@@ -57,6 +77,7 @@ export default function Header() {
             </li>
         </ul>
         </nav>
+      </div>
     </header>
   )
 }

@@ -2,7 +2,7 @@ import React, {useRef} from 'react'
 import lottie from "lottie-web/build/player/lottie_light";
 import derigoLogo from '../assets/img/logo-derigo-lottie.json';
 import useIsomorphicLayoutEffect from '@/utils/isomorphicLayoutEffect';
-import { gsap, Expo } from "gsap";
+import { gsap, Expo } from "gsap/dist/gsap";
 
 export default function Loader() {
     const container = useRef()

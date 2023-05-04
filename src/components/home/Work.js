@@ -1,7 +1,7 @@
-import React, {useState, useCallback, useRef} from 'react'
+import React, { useRef } from 'react'
 import styles from '@/styles/Work.module.scss'
 import Carousel, { CarouselItem } from '../Carousel'
-import { gsap, Expo } from "gsap";
+import { gsap, Expo } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import useIsomorphicLayoutEffect from '@/utils/isomorphicLayoutEffect';
 import SplitType from 'split-type'
@@ -124,7 +124,7 @@ export default function Work() {
         <div className="container">
             <h2 className='title'>Nuestro Trabajo</h2>
             <p className='subtitle'>Proyectos destacados</p>
-            <span className={`${styles.line} my-12 sm:my-8 line`}></span>
+            <span className={`my-12 sm:my-8 line`}></span>
             <div className="carousel-wrapper">
                 <Carousel slides={isBreakpoint ? 1 : 2} width={isBreakpoint ? 100 : 50 }>
                     {

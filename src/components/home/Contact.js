@@ -5,7 +5,7 @@ import lottie from "lottie-web/build/player/lottie_light";
 import emailjs from '@emailjs/browser';
 import { init } from "@emailjs/browser";
 import derigoLogo from '../../assets/img/logo-derigo-lottie.json';
-import { gsap, Expo } from "gsap";
+import { gsap, Expo } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import SplitType from 'split-type'
 
@@ -122,7 +122,7 @@ export default function Contact() {
     <section ref={contact} id='contacto' className={`${styles.contacto} container py-16`}>
         <h2 className='title'>Ideamos la mejor solución en frío para tu proyecto.</h2>
         <p className='subtitle'>Contactános</p>
-        <span className={`${styles.line} my-12 sm:my-8 line`}></span>
+        <span className={`my-12 sm:my-8 line`}></span>
 
         <div className="flex gap-8 sm:flex-wrap sm:justify-center">
             <div id="derigo-logo" className={`${styles["contacto__lottie"]} sm:order-2`}></div>
@@ -136,11 +136,12 @@ export default function Contact() {
                         Nombre
                         </label>
                         <input
-                        className="w-full appearance-none block bg-[#fff] text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#5193ed]"
+                        className="w-full appearance-none block bg-[#fff] text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#00bd29]"
                         name="from_name"
                         type="text"
                         placeholder="Nombre"
                         ref={name}
+                        required
                         />
                     </div>
                 </div>
@@ -153,11 +154,12 @@ export default function Contact() {
                         Email
                         </label>
                         <input
-                        className="w-full appearance-none block bg-[#fff] text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#5193ed]"
+                        className="w-full appearance-none block bg-[#fff] text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#00bd29]"
                         name="from_email"
                         type="text"
                         placeholder="Email"
                         ref={email}
+                        required
                         />
                     </div>
                 </div>
@@ -170,11 +172,12 @@ export default function Contact() {
                         Mensaje
                         </label>
                         <textarea
-                        className="w-full appearance-none block bg-[#fff] text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#5193ed]"
+                        className="w-full appearance-none block bg-[#fff] text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#00bd29]"
                         name="message"
                         type="text"
                         placeholder="Mensaje"
                         ref={msg}
+                        required
                         />
                     </div>
                 </div>

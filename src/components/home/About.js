@@ -1,6 +1,6 @@
 import React, {useRef} from 'react'
 import styles from '@/styles/About.module.scss'
-import { gsap, Expo } from "gsap";
+import { gsap, Expo } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import useIsomorphicLayoutEffect from '@/utils/isomorphicLayoutEffect';
 import SplitType from 'split-type'
@@ -83,7 +83,7 @@ export default function About() {
         <div className={`${styles['about__title']}`}>
             <h2 className='title'>Sobre nosotros</h2>
             <p className='subtitle'>Nuestra trayectoria</p>
-            <span className={`${styles.line} my-12 sm:my-8 line`}></span>
+            <span className={`my-12 sm:my-8 line`}></span>
         </div>
         <ul className={`${styles['about__text']}`}>
           <li className='card'>Con más de 40 años de experiencia en instalaciones Frigoríficas, estamos ubicados en el primer lugar en Argentina en lo que se refiere a ejecución de Obras con compresores a Tornillo.</li>

@@ -1,13 +1,6 @@
 @import 'Variables';
 
 .contacto {
-    .line {
-        width: 0px;
-        height: 3px;
-        background-color: $secondary-color;
-        display: block;
-    }
-
     &__lottie {
         max-width: 100%;
         width: 400px;

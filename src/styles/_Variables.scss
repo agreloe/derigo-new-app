@@ -26,6 +26,14 @@ $navHeight: 80px;
     line-height: 3rem;
 }
 
+@mixin subtitle($size) {
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: .2rem;
+    padding-bottom: 1rem;
+    font-size: $size;
+}
+
 @mixin body($size, $color) {
     font-family: $secondary-font;
     color: $color;
@@ -66,6 +74,18 @@ $navHeight: 80px;
         border: 1px solid $secondary-color;
     }
 
+}
+
+@mixin line($color) {
+    width: 0px;
+    height: 3px;
+    background-color: $secondary-color;
+    display: block;
+    transform-origin: center;
+}
+
+@mixin bg-color($opacity) {
+    background-color: hsla(232, 45%, 44%, $opacity);
 }
 
 
