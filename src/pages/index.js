@@ -6,11 +6,12 @@ import Work from "@/components/home/Work"
 import Contact from "@/components/home/Contact"
 import Nosotros from "@/components/home/Nosotros"
 import Trabajos from "@/components/home/Trabajos"
+import Head from "next/head"
 
 export default function Home() {
   return (
     <Fragment>
-      <ScrollRestorationDisabler>
+      <Head>
       <title>
             Instalaciones de frío con la mejor tecnología y mayor ahorro energético | DeRigo Argentina
           </title>
@@ -30,7 +31,7 @@ export default function Home() {
             property="og:image"
             content="https://ik.imagekit.io/c9tj2d0xqow/tr:w-auto/derigo-meta-img_BttwDMO22.png"
           />
-      </ScrollRestorationDisabler>
+      </Head>
       <Banner />
       <Nosotros />
       <Trabajos />
