@@ -11,12 +11,11 @@ export default function Header() {
   const [clientWindowHeight, setClientWindowHeight] = useState('');
 
   const handleScroll = () => {
-    if (typeof window !== 'undefined') {
+
       const currentScrollY = window.scrollY;
-      const isVisible = clientWindowHeight > currentScrollY
+      const isVisible = clientWindowHeight > currentScrollY;
       setClientWindowHeight(window.scrollY);
       setVisible(isVisible)
-    }
   };
 
   const openMenu = () => {
