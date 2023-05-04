@@ -11,7 +11,7 @@ export default function BrandSlider({images}) {
                 {
                     images.map((img, index)=>(
                         <li key={index} >
-                            <Image alt='/' src={img.url} width={0} height={0} sizes="100vw"></Image>
+                            <Image alt='/' src={img.url} width={0} height={0} sizes="100vw" priority={true}></Image>
                         </li>
                     ))
                 }
