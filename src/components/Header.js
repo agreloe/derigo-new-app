@@ -8,14 +8,12 @@ import useIsomorphicLayoutEffect from "@/utils/isomorphicLayoutEffect";
 export default function Header() {
   const [toggle, setToggle] = useState(false);
   const [visible, setVisible] = useState(true);
-  const [clientWindowHeight, setClientWindowHeight] = useState('');
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
 
   const handleScroll = () => {
-
-      const currentScrollY = window.scrollY;
-      const isVisible = clientWindowHeight > currentScrollY;
-      setClientWindowHeight(window.scrollY);
-      setVisible(isVisible)
+      const currentScrollPos = window.scrollY;
+      setVisible(prevScrollPos > currentScrollPos || (prevScrollPos - currentScrollPos > 70) || currentScrollPos < 10)
+      setPrevScrollPos(currentScrollPos);
   };
 
   const openMenu = () => {
@@ -38,7 +36,7 @@ export default function Header() {
   useIsomorphicLayoutEffect(()=>{
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  },[clientWindowHeight])
+  },[prevScrollPos, visible, handleScroll])
 
 
 
