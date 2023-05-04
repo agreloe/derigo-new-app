@@ -27,7 +27,7 @@ export default function Loader() {
     },[])
   return (
     <div ref={container} className="flex justify-center items-center w-screen h-screen bg-[#f8f8ff]">
-        <div id="derigo-logo-loader" className='w-[300px] h-[200px]'></div>
+        <div id="derigo-logo-loader" className='w-[300px] h-[200px] sm:w-[150px] sm:h-[100px]'></div>
     </div>
   )
 }
