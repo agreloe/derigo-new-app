@@ -8,7 +8,7 @@ import useIsomorphicLayoutEffect from "@/utils/isomorphicLayoutEffect";
 export default function Header() {
   const [toggle, setToggle] = useState(false);
   const [visible, setVisible] = useState(true);
-  const [clientWindowHeight, setClientWindowHeight] = useState(window.scrollY);
+  const [clientWindowHeight, setClientWindowHeight] = useState('');
 
   const handleScroll = () => {
     if (typeof window !== 'undefined') {
