@@ -1,0 +1,60 @@
+@import 'Variables';
+
+.slider {
+    --total-brands: 10;
+    --logo-width: 12rem;
+    --total-logo-width: calc(var(--total-brands) * var(--logo-width) * 2);
+}
+
+.slider {
+    width: 100%;
+    height: 12rem;
+    overflow: hidden;
+    position: relative;
+
+    ul {
+        display: flex;
+        width: var(--total-logo-width);
+        animation: slideLeft 14s linear infinite;
+        height: 100%;
+
+        li {
+            width: var(--logo-width);
+            font-size: 2rem;
+            text-align: center;
+            margin-left: 2rem;
+
+            img {
+                height: 100%;
+                width: var(--logo-width);
+                object-fit: contain;
+            }
+        }
+
+        @keyframes slideLeft {
+            100% {
+                transform: translateX(calc(-100% / 2));
+            }
+        }
+    }
+
+    &::before, &::after {
+        content: "";
+        height: 100%;
+        position: absolute;
+        width: var(--logo-width);
+        z-index: 2;
+    }
+
+    &::before {
+        right: 0;
+        background: linear-gradient(to left, #fafaff 0%, #faf0 100%);
+    }
+
+    &::after {
+        top: 0;
+        left: 0;
+        background: linear-gradient(to right, #fafaff 0%, #faf0 100%);
+    }
+
+}

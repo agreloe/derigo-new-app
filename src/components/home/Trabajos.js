@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import useIsomorphicLayoutEffect from '@/utils/isomorphicLayoutEffect';
 import SplitType from 'split-type'
 import Image from 'next/image';
+import BrandSlider from '../BrandSlider';
 
 export default function Trabajos() {
     const trabajos = useRef()
@@ -17,6 +18,9 @@ export default function Trabajos() {
 
         const text = new SplitType(q('.title'), { types: 'words' })
         const words = text.words
+
+        const textSubtitle = new SplitType(q('.title2'), { types: 'words' })
+        const wordSubtitle = textSubtitle.words
 
           ctx.current = gsap.context(()=>{
               tl.current = gsap
@@ -35,7 +39,7 @@ export default function Trabajos() {
                 }, '-=0.25'
               )
               .fromTo(
-                q('.subtitle'),
+                q('.subtitle1'),
                 {
                   y: 25,
                   opacity: 0
@@ -47,7 +51,7 @@ export default function Trabajos() {
                 }, '-=0.25'
               )
               .to(
-                q('.line'),
+                q('.line1'),
                 {
                   width: 100,
                   ease: Expo.easeOut
@@ -64,6 +68,38 @@ export default function Trabajos() {
                     opacity: 1,
                     stagger: 0.25,
                     ease: Expo.easeOut
+                }, '-=0.25'
+              )
+              .fromTo(
+                wordSubtitle,
+                {
+                  y: 25,
+                  opacity: 0
+                },
+                {
+                  y: 0,
+                  opacity: 1,
+                  stagger: 0.25,
+                  ease: Expo.easeOut
+                }, '-=0.25'
+              )
+              .fromTo(
+                q('.subtitle2'),
+                {
+                  y: 25,
+                  opacity: 0
+                },
+                {
+                  y: 0,
+                  opacity: 1,
+                  ease: Expo.easeOut
+                }, '-=0.25'
+              )
+              .to(
+                q('.line2'),
+                {
+                  width: 100,
+                  ease: Expo.easeOut
                 }, '-=0.25'
               )
             }, trabajos)
@@ -112,13 +148,76 @@ export default function Trabajos() {
         },
     ]
 
+    const images = [
+      {
+          'url':'https://pertutti.com.ar/wp-content/uploads/2021/10/Logo.png'
+      },
+      {
+          'url':'https://beta.iflow21.com/wp-content/uploads/2020/11/IflowLogosolo.png'
+      },
+      {
+          'url':'https://1000marcas.net/wp-content/uploads/2020/11/Carrefour-Logo.png'
+      },
+      {
+          'url':'https://cdn.freebiesupply.com/logos/thumbs/2x/pf-changs-logo-logo.png'
+      },
+      {
+          'url':'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Walmart_logo.svg/2560px-Walmart_logo.svg.png'
+      },
+      {
+          'url':'https://www.laanonima.com.ar/contents/themes/responsive/img/img_LA.png'
+      },
+      {
+          'url':'https://www.dogoseguridad.com.ar/images/logos-clientes/logo1.png'
+      },
+      {
+          'url':'https://www.deananddennys.com/contenidos/1611864738.png'
+      },
+      {
+          'url':'https://logos-world.net/wp-content/uploads/2022/04/Dia-Emblem.png'
+      },
+      {
+          'url':'https://inverlat.com.ar/images/fenoglio_logo.png'
+      },
+      {
+          'url':'https://pertutti.com.ar/wp-content/uploads/2021/10/Logo.png'
+      },
+      {
+          'url':'https://beta.iflow21.com/wp-content/uploads/2020/11/IflowLogosolo.png'
+      },
+      {
+          'url':'https://1000marcas.net/wp-content/uploads/2020/11/Carrefour-Logo.png'
+      },
+      {
+          'url':'https://cdn.freebiesupply.com/logos/thumbs/2x/pf-changs-logo-logo.png'
+      },
+      {
+          'url':'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Walmart_logo.svg/2560px-Walmart_logo.svg.png'
+      },
+      {
+          'url':'https://www.laanonima.com.ar/contents/themes/responsive/img/img_LA.png'
+      },
+      {
+          'url':'https://www.dogoseguridad.com.ar/images/logos-clientes/logo1.png'
+      },
+      {
+          'url':'https://www.deananddennys.com/contenidos/1611864738.png'
+      },
+      {
+          'url':'https://logos-world.net/wp-content/uploads/2022/04/Dia-Emblem.png'
+      },
+      {
+          'url':'https://inverlat.com.ar/images/fenoglio_logo.png'
+      },
+  ]
+
 
   return (
     <section id='trabajos' ref={trabajos} className={`${styles.trabajos} py-16`}>
         <div className="container">
             <h2 className='title'>Nuestro Trabajo</h2>
-            <p className='subtitle'>Proyectos destacados</p>
-            <span className={`my-12 sm:my-8 line`}></span>
+            <p className='subtitle subtitle1'>Proyectos destacados</p>
+            <span className={`my-12 sm:my-8 line line1`}></span>
             <div className="flex flex-wrap">
                 {
                     list.map((item,index)=>(
@@ -135,6 +234,13 @@ export default function Trabajos() {
                     ))
                 }
             </div>
+
+            <h3 className='pt-16 title2'>Nuestros clientes</h3>
+            <p className='subtitle subtitle2'>Confían en nosotros</p>
+            <span className={`my-12 sm:my-8 line line2`}></span>
+
+            <BrandSlider images={images} />
+
         </div>
     </section>
   )

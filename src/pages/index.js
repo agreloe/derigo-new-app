@@ -7,6 +7,7 @@ import Contact from "@/components/home/Contact"
 import Nosotros from "@/components/home/Nosotros"
 import Trabajos from "@/components/home/Trabajos"
 import Head from "next/head"
+import BrandSlider from "@/components/BrandSlider"
 
 export default function Home() {
   return (
