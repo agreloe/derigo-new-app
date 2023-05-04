@@ -66,6 +66,7 @@
 
             &__img {
                 transition: $transition;
+                object-fit: cover;
             }
 
             &.active {
