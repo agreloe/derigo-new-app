@@ -20,6 +20,22 @@ export default function Contact() {
     const email = useRef();
     const msg = useRef();
     init("fmCoPVvWrO9k_JDN5");
+
+    const successAnim = () => {
+      const anim = gsap.context(()=>{
+        gsap.to(
+          q('.success'),
+          {
+            opacity: 1,
+            y:0,
+            ease: Expo.easeOut
+          }
+        )
+        return () => anim.revert()
+      })
+    }
+
+
     useIsomorphicLayoutEffect(()=>{
         lottie.loadAnimation({
             container: document.querySelector("#derigo-logo"),
@@ -87,7 +103,9 @@ export default function Contact() {
             end: "bottom top",
             animation: tl.current,
             onEnter: () => {
-              lottie.play()
+              setTimeout(() => {
+                lottie.play()
+              }, 1000);
               return () => ctx.current.revert()
             },
           });
@@ -116,6 +134,7 @@ export default function Contact() {
             name.current.value = ""
             email.current.value = ""
             msg.current.value = ""
+            successAnim()
           }, 500)
       };
   return (
@@ -181,7 +200,10 @@ export default function Contact() {
                         />
                     </div>
                 </div>
-                <input className='button mt-8 float-right' type="submit" value="Enviar" />
+                <div className="form-footer flex items-center justify-between">
+                  <p className={`text-[#00bd29] success ${styles.success}`}>Tu mensaje se envió con éxito</p>
+                  <input className='button my-4 float-right' type="submit" value="Enviar" />
+                </div>
             </form>
         </div>
 

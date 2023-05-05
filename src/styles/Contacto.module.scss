@@ -8,6 +8,11 @@
         overflow-y: hidden;
     }
 
+    .success {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
     @include small-screen {
         &__lottie {
             width: auto;
