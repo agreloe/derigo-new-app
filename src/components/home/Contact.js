@@ -124,10 +124,10 @@ export default function Contact() {
         <p className='subtitle'>Contactános</p>
         <span className={`my-12 sm:my-8 line`}></span>
 
-        <div className="flex gap-8 sm:flex-wrap sm:justify-center">
+        <div className="flex gap-8 sm:flex-wrap justify-between sm:justify-center">
             <div id="derigo-logo" className={`${styles["contacto__lottie"]} sm:order-2`}></div>
 
-            <form ref={form} onSubmit={sendEmail} className='form'>
+            <form ref={form} onSubmit={sendEmail} className='form w-[50%] sm:w-full'>
                 <div className="inline-flex flex-wrap w-full">
                     <div className="w-full">
                         <label

@@ -4,6 +4,7 @@
     --total-brands: 10;
     --logo-width: 12rem;
     --total-logo-width: calc(var(--total-brands) * var(--logo-width) * 2);
+    --animation-time: calc(var(--total-brands)* 2s);
 }
 
 .slider {
@@ -15,7 +16,7 @@
     ul {
         display: flex;
         width: var(--total-logo-width);
-        animation: slideLeft 14s linear infinite;
+        animation: slideLeft var(--animation-time) linear infinite;
         height: 100%;
 
         li {

@@ -6,7 +6,7 @@ export default function BrandSlider({images}) {
 
   return (
 
-        <div className={`${styles.slider}`}>
+        <div className={`${styles.slider} slider`}>
             <ul>
                 {
                     images.map((img, index)=>(

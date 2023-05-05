@@ -48,7 +48,7 @@ export default function Nosotros() {
                 opacity: 1,
                 stagger: 0.25,
                 ease: Expo.easeOut
-              }, '-=0.25'
+              }
             )
             .fromTo(
               q('.subtitle'),
@@ -105,7 +105,7 @@ export default function Nosotros() {
                   opacity: 1,
                   stagger: 0.25,
                   ease: Expo.easeOut
-                }
+                }, '-=0.25'
               )
 
         }, nosotros)

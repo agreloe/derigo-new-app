@@ -101,6 +101,17 @@ export default function Trabajos() {
                   width: 100,
                   ease: Expo.easeOut
                 }, '-=0.25'
+                )
+                .fromTo(
+                  q('.slider'),
+                  {
+                    opacity: 0,
+                    ease: Expo.easeOut
+                  },
+                  {
+                    opacity: 1,
+                    ease: Expo.easeOut
+                  }, '-=0.5'
               )
             }, trabajos)
 
@@ -179,37 +190,12 @@ export default function Trabajos() {
       {
           'url':'https://inverlat.com.ar/images/fenoglio_logo.png'
       },
-      {
-          'url':'https://pertutti.com.ar/wp-content/uploads/2021/10/Logo.png'
-      },
-      {
-          'url':'https://beta.iflow21.com/wp-content/uploads/2020/11/IflowLogosolo.png'
-      },
-      {
-          'url':'https://1000marcas.net/wp-content/uploads/2020/11/Carrefour-Logo.png'
-      },
-      {
-          'url':'https://cdn.freebiesupply.com/logos/thumbs/2x/pf-changs-logo-logo.png'
-      },
-      {
-          'url':'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Walmart_logo.svg/2560px-Walmart_logo.svg.png'
-      },
-      {
-          'url':'https://www.laanonima.com.ar/contents/themes/responsive/img/img_LA.png'
-      },
-      {
-          'url':'https://www.dogoseguridad.com.ar/images/logos-clientes/logo1.png'
-      },
-      {
-          'url':'https://www.deananddennys.com/contenidos/1611864738.png'
-      },
-      {
-          'url':'https://logos-world.net/wp-content/uploads/2022/04/Dia-Emblem.png'
-      },
-      {
-          'url':'https://inverlat.com.ar/images/fenoglio_logo.png'
-      },
-  ]
+    ]
+
+    const imagesCopy = images
+
+    const imagesDoubled = [].concat(images,imagesCopy)
+
 
 
   return (
@@ -239,7 +225,7 @@ export default function Trabajos() {
             <p className='subtitle subtitle2'>Confían en nosotros</p>
             <span className={`my-12 sm:my-8 line line2`}></span>
 
-            <BrandSlider images={images} />
+            <BrandSlider images={imagesDoubled} />
 
         </div>
     </section>
