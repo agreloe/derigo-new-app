@@ -1,5 +1,6 @@
 {
   "nosotros": {
+    "Nosotros route": "about",
     "Nosotros title": "About Us",
     "Nosotros subtitle": "Our history",
     "Nosotros description": "With more than 40 years of experience in refrigeration facilities, we are ranked first in Argentina in terms of execution of works with screw compressors.",
@@ -15,6 +16,7 @@
     "Banner subtitle":"With the greatest energy savings and the best technology"
   },
   "trabajos": {
+    "Trabajos route": "work",
     "Trabajos title": "Our work",
     "Trabajos subtitle": "Featured projects",
     "Trabajos item1Title": "La Anónima - Robotic Distribution Center",
@@ -29,6 +31,7 @@
     "Trabajos clientsSubtitle": "They trust us"
   },
   "contacto": {
+    "Contacto route": "contact",
     "Contacto title": "We plan the best refrigeration solution for your project.",
     "Contacto subtitle": "Contact us",
     "Contacto formName": "Name",

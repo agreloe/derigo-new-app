@@ -127,7 +127,7 @@ export default function Nosotros() {
           });
     },[])
   return (
-    <section id='nosotros' ref={nosotros} className={`${styles.nosotros}`}>
+    <section id={`${t("nosotros.Nosotros route")}`} ref={nosotros} className={`${styles.nosotros}`}>
         <div className="container flex items-center justify-between gap-8 sm:flex-wrap sm:justify-center py-16">
             <div className='w-[50%] sm:w-[100%]'>
                 <h2 className='title'>{t("nosotros.Nosotros title")}</h2>

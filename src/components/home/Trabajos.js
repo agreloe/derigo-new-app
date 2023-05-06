@@ -201,7 +201,7 @@ export default function Trabajos() {
 
 
   return (
-    <section id='trabajos' ref={trabajos} className={`${styles.trabajos} py-16`}>
+    <section id={`${t("trabajos.Trabajos route")}`} ref={trabajos} className={`${styles.trabajos} py-16`}>
         <div className="container">
             <h2 className='title'>{t("trabajos.Trabajos title")}</h2>
             <p className='subtitle subtitle1'>{t("trabajos.Trabajos subtitle")}</p>

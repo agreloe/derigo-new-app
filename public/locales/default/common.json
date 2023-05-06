@@ -1,5 +1,6 @@
 {
   "nosotros": {
+    "Nosotros route": "nosotros",
     "Nosotros title": "Sobre nosotros",
     "Nosotros subtitle": "Nuestra trayectoria",
     "Nosotros description": "Con más de 40 años de experiencia en instalaciones Frigoríficas, estamos ubicados en el primer lugar en Argentina en lo que se refiere a ejecución de Obras con compresores a Tornillo.",
@@ -15,6 +16,7 @@
     "Banner subtitle":"Con el mayor ahorro energético y la mejor tecnología en frío"
   },
   "trabajos": {
+    "Trabajos route": "trabajos",
     "Trabajos title": "Nuestro Trabajo",
     "Trabajos subtitle": "Proyectos destacados",
     "Trabajos item1Title": "La Anónima - Centro de Distribución Robotizado",
@@ -29,6 +31,7 @@
     "Trabajos clientsSubtitle": "Confían en nosotros"
   },
   "contacto": {
+    "Contacto route": "contacto",
     "Contacto title": "Ideamos la mejor solución en frío para tu proyecto.",
     "Contacto subtitle": "Contactános",
     "Contacto formName": "Nombre",

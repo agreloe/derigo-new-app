@@ -139,7 +139,7 @@ export default function Contact() {
           }, 500)
       };
   return (
-    <section ref={contact} id='contacto' className={`${styles.contacto} container py-16`}>
+    <section ref={contact} id={`${t("contacto.Contacto route")}`} className={`${styles.contacto} container py-16`}>
         <h2 className='title'>{t("contacto.Contacto title")}</h2>
         <p className='subtitle'>{t("contacto.Contacto subtitle")}</p>
         <span className={`my-12 sm:my-8 line`}></span>
