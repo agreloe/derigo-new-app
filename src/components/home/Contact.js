@@ -8,8 +8,10 @@ import derigoLogo from '../../assets/img/logo-derigo-lottie.json';
 import { gsap, Expo } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import SplitType from 'split-type'
+import { useTranslation } from "next-i18next";
 
 export default function Contact() {
+  const { t } = useTranslation();
   const contact = useRef()
     const q = gsap.utils.selector(contact);
     gsap.registerPlugin(ScrollTrigger);
@@ -34,7 +36,6 @@ export default function Contact() {
         return () => anim.revert()
       })
     }
-
 
     useIsomorphicLayoutEffect(()=>{
         lottie.loadAnimation({
@@ -139,8 +140,8 @@ export default function Contact() {
       };
   return (
     <section ref={contact} id='contacto' className={`${styles.contacto} container py-16`}>
-        <h2 className='title'>Ideamos la mejor solución en frío para tu proyecto.</h2>
-        <p className='subtitle'>Contactános</p>
+        <h2 className='title'>{t("contacto.Contacto title")}</h2>
+        <p className='subtitle'>{t("contacto.Contacto subtitle")}</p>
         <span className={`my-12 sm:my-8 line`}></span>
 
         <div className="flex gap-8 sm:flex-wrap justify-between sm:justify-center">
@@ -152,13 +153,13 @@ export default function Contact() {
                         <label
                         className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                         >
-                        Nombre
+                        {t("contacto.Contacto formName")}
                         </label>
                         <input
                         className="w-full appearance-none block bg-[#fff] text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#00bd29]"
                         name="from_name"
                         type="text"
-                        placeholder="Nombre"
+                        placeholder={t("contacto.Contacto formName")}
                         ref={name}
                         required
                         />
@@ -170,13 +171,13 @@ export default function Contact() {
                         <label
                         className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                         >
-                        Email
+                        {t("contacto.Contacto formEmail")}
                         </label>
                         <input
                         className="w-full appearance-none block bg-[#fff] text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#00bd29]"
                         name="from_email"
                         type="text"
-                        placeholder="Email"
+                        placeholder={t("contacto.Contacto formEmail")}
                         ref={email}
                         required
                         />
@@ -188,21 +189,21 @@ export default function Contact() {
                         <label
                         className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                         >
-                        Mensaje
+                        {t("contacto.Contacto formMessage")}
                         </label>
                         <textarea
                         className="w-full appearance-none block bg-[#fff] text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#00bd29]"
                         name="message"
                         type="text"
-                        placeholder="Mensaje"
+                        placeholder={t("contacto.Contacto formMessage")}
                         ref={msg}
                         required
                         />
                     </div>
                 </div>
                 <div className="form-footer flex items-center justify-between">
-                  <p className={`text-[#00bd29] success ${styles.success}`}>Tu mensaje se envió con éxito</p>
-                  <input className='button my-4 float-right' type="submit" value="Enviar" />
+                  <p className={`text-[#00bd29] success ${styles.success}`}>{t("contacto.Contacto formSuccess")}</p>
+                  <input className='button my-4 float-right' type="submit" value={`${t("contacto.Contacto button")}`} />
                 </div>
             </form>
         </div>

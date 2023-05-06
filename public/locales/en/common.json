@@ -1,0 +1,53 @@
+{
+  "nosotros": {
+    "Nosotros title": "About Us",
+    "Nosotros subtitle": "Our history",
+    "Nosotros description": "With more than 40 years of experience in refrigeration facilities, we are ranked first in Argentina in terms of execution of works with screw compressors.",
+    "Nosotros experienceTitle": "Experience",
+    "Nosotros experienceText": "We have carried out the Engineering, Installation and Commissioning of the most important Distribution Centers in the country.",
+    "Nosotros energyTitle": "Energy saving",
+    "Nosotros energyText": "We work with Green High Efficiency technologies based on the application of energy saving strategies such as Low Condensing and Hot Gas Defrost, with which we have achieved energy savings of more than 30%.",
+    "Nosotros representationTitle": "International representation",
+    "Nosotros representationText": "We have the official representation in Argentina of Weber Cooling, a company from the Netherlands dedicated to the manufacture of vacuum cooling chambers."
+  },
+  "banner": {
+    "Banner title":"Refrigeration solutions",
+    "Banner subtitle":"With the greatest energy savings and the best technology"
+  },
+  "trabajos": {
+    "Trabajos title": "Our work",
+    "Trabajos subtitle": "Featured projects",
+    "Trabajos item1Title": "La Anónima - Robotic Distribution Center",
+    "Trabajos item1Text": "Installation of 8 Bitzer HS-85 Series Screw Compressors with a Power of 1045 Hp. Green High Efficiency System.",
+    "Trabajos item2Title": "Dia% - Distribution Center",
+    "Trabajos item2Text": "Installation of 8 Bitzer HS-74 Series Screw Compressors with a Power of 600 Hp.",
+    "Trabajos item3Title": "Walmart - Distribution Center Moreno",
+    "Trabajos item3Text": "Installation of 6 Bitzer HS-85 Series Screw Compressors with a Power of 795 Hp. Green High Efficiency System.",
+    "Trabajos item4Title": "Walmart - Distribution Center Córdoba",
+    "Trabajos item4Text": "Installation of 6 Bitzer HS-85 Series Screw Compressors with a Power of 840 Hp.",
+    "Trabajos clientsTitle": "Our Clients",
+    "Trabajos clientsSubtitle": "They trust us"
+  },
+  "contacto": {
+    "Contacto title": "We plan the best refrigeration solution for your project.",
+    "Contacto subtitle": "Contact us",
+    "Contacto formName": "Name",
+    "Contacto formEmail": "Email",
+    "Contacto formMessage": "Message",
+    "Contacto formSuccess": "Your message was sent successfully",
+    "Contacto button": "Send"
+  },
+  "footer": {
+    "Footer rights": "All rights reserved"
+  },
+  "header": {
+    "Header about": "About Us",
+    "Header work": "Our work",
+    "Header contact": "Contact Us"
+  },
+  "metadata": {
+    "Metadata title": "Refrigeration installations with the best technology and greater energy savings",
+    "Metadata description": "At DeRigo Argentina, we are experts in refrigeration installations with the best technology and the greatest energy savings. We offer customized solutions to help you reduce your energy consumption and improve your efficiency. Contact us for more information on how we can help you."
+  }
+
+}

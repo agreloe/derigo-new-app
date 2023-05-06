@@ -7,26 +7,29 @@ import Contact from "@/components/home/Contact"
 import Nosotros from "@/components/home/Nosotros"
 import Trabajos from "@/components/home/Trabajos"
 import Head from "next/head"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
 
 export default function Home() {
+  const { t } = useTranslation();
   return (
     <Fragment>
       <Head>
       <title>
-            Instalaciones de frío con la mejor tecnología y mayor ahorro energético | DeRigo Argentina
+            {t("metadata.Metadata title")}
           </title>
           <meta
             name="title"
-            content="Instalaciones de frío con la mejor tecnología y mayor ahorro energético | DeRigo Argentina"
+            content={`${t("metadata.Metadata title")}`}
           ></meta>
           <meta
             name="description"
-            content="En DeRigo Argentina, somos expertos en instalaciones de frío con la mejor tecnología y el mayor ahorro energético. Ofrecemos soluciones personalizadas para ayudarle a reducir su consumo de energía y mejorar su eficiencia. Contacte con nosotros para obtener más información sobre cómo podemos ayudarle."
+            content={`${t("metadata.Metadata description")}`}
           ></meta>
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://derigoargentina.com/" />
-          <meta property="og:title" content="Instalaciones de frío con la mejor tecnología y mayor ahorro energético | DeRigo Argentina" />
-          <meta property="og:description" content="En DeRigo Argentina, somos expertos en instalaciones de frío con la mejor tecnología y el mayor ahorro energético. Ofrecemos soluciones personalizadas para ayudarle a reducir su consumo de energía y mejorar su eficiencia. Contacte con nosotros para obtener más información sobre cómo podemos ayudarle." />
+          <meta property="og:title" content={`${t("metadata.Metadata title")}`} />
+          <meta property="og:description" content={`${t("metadata.Metadata description")}`} />
           <meta
             property="og:image"
             content="https://ik.imagekit.io/c9tj2d0xqow/tr:w-auto/derigo-meta-img_BttwDMO22.png"
@@ -38,4 +41,12 @@ export default function Home() {
       <Contact />
     </Fragment>
   )
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
 }

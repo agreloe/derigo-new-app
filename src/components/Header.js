@@ -4,8 +4,11 @@ import Link from "next/link";
 import styles from '@/styles/Header.module.scss'
 import logo from '@/assets/img/Derigo_logo_Redesign.svg'
 import useIsomorphicLayoutEffect from "@/utils/isomorphicLayoutEffect";
+import LocaleSwitcher from '../components/LocaleSwitcher'
+import { useTranslation } from "next-i18next";
 
 export default function Header() {
+  const { t } = useTranslation();
   const [toggle, setToggle] = useState(false);
   const [visible, setVisible] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -59,18 +62,21 @@ export default function Header() {
         >
             <li>
                 <Link href={"/#nosotros"} onClick={closeMenu}>
-                Nosotros
+                {t("header.Header about")}
                 </Link>
             </li>
             <li>
                 <Link href={"/#trabajos"} onClick={closeMenu}>
-                Trabajos
+                {t("header.Header work")}
                 </Link>
             </li>
             <li>
                 <Link href={"/#contacto"} onClick={closeMenu}>
-                Contacto
+                {t("header.Header contact")}
                 </Link>
+            </li>
+            <li>
+              <LocaleSwitcher />
             </li>
         </ul>
         </nav>

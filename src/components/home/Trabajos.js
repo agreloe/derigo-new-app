@@ -6,8 +6,10 @@ import useIsomorphicLayoutEffect from '@/utils/isomorphicLayoutEffect';
 import SplitType from 'split-type'
 import Image from 'next/image';
 import BrandSlider from '../BrandSlider';
+import { useTranslation } from "next-i18next";
 
 export default function Trabajos() {
+  const { t } = useTranslation();
     const trabajos = useRef()
     const q = gsap.utils.selector(trabajos);
     gsap.registerPlugin(ScrollTrigger);
@@ -138,23 +140,23 @@ export default function Trabajos() {
 
     const list = [
         {
-            "title":"La Anónima - Centro de Distribución Robotizado",
-            "text":"Instalación de 8 Compresores a Tornillo Bitzer Serie HS-85 con Potencia de 1045 Hp. Sistema Green High Efficiency.",
+            "title": t("trabajos.Trabajos item1Title"),
+            "text": t("trabajos.Trabajos item1Text"),
             "img":"https://ik.imagekit.io/c9tj2d0xqow/tr:w-auto/DSC_0118__1__QMdtHGlES.jpg",
         },
         {
-            "title":"Dia% - Centro de Distribución",
-            "text":"Instalación de 8 Compresores a Tornillo Bitzer Serie HS-74 con Potencia de 600 Hp.",
+            "title": t("trabajos.Trabajos item2Title"),
+            "text": t("trabajos.Trabajos item2Text"),
             "img":"https://ik.imagekit.io/c9tj2d0xqow/tr:w-auto/dia-centrodedistribucion-2_scQjOHBhA.jpg",
         },
         {
-            "title":"Walmart - Centro de distribución Moreno",
-            "text":"Instalación de 6 Compresores a Tornillo Bitzer Serie HS-85 con Potencia de 795 Hp. Sistema Green High Efficiency.",
+            "title": t("trabajos.Trabajos item3Title"),
+            "text": t("trabajos.Trabajos item3Text"),
             "img":"https://ik.imagekit.io/c9tj2d0xqow/tr:w-auto/2012-wallmart-moreno-1_7srcup3uN.jpg",
         },
         {
-            "title":"Walmart - Centro de distribución Córdoba",
-            "text":"Instalación de 6 Compresores a Tornillo Bitzer Serie HS-85 con Potencia de 840 Hp.",
+            "title": t("trabajos.Trabajos item4Title"),
+            "text": t("trabajos.Trabajos item4Text"),
             "img":"https://ik.imagekit.io/c9tj2d0xqow/tr:w-auto/2008-wallmart-moreno-5_X_tYhZOnp.jpg",
         },
     ]
@@ -201,8 +203,8 @@ export default function Trabajos() {
   return (
     <section id='trabajos' ref={trabajos} className={`${styles.trabajos} py-16`}>
         <div className="container">
-            <h2 className='title'>Nuestro Trabajo</h2>
-            <p className='subtitle subtitle1'>Proyectos destacados</p>
+            <h2 className='title'>{t("trabajos.Trabajos title")}</h2>
+            <p className='subtitle subtitle1'>{t("trabajos.Trabajos subtitle")}</p>
             <span className={`my-12 sm:my-8 line line1`}></span>
             <div className="flex flex-wrap">
                 {
@@ -221,8 +223,8 @@ export default function Trabajos() {
                 }
             </div>
 
-            <h3 className='pt-16 title2'>Nuestros clientes</h3>
-            <p className='subtitle subtitle2'>Confían en nosotros</p>
+            <h3 className='pt-16 title2'>{t("trabajos.Trabajos clientsTitle")}</h3>
+            <p className='subtitle subtitle2'>{t("trabajos.Trabajos clientsSubtitle")}</p>
             <span className={`my-12 sm:my-8 line line2`}></span>
 
             <BrandSlider images={imagesDoubled} />

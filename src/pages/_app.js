@@ -4,13 +4,14 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Loader from '@/components/Loader';
 import useIsomorphicLayoutEffect from '@/utils/isomorphicLayoutEffect';
+import { appWithTranslation } from "next-i18next";
 
 const littleCat = `%c \/\\_\/\\\r\n( o.o )\r\n > ^ <`
 const font = `font-family: monospace`
 const signature = 'agreloe'
 console.log(littleCat,font,signature);
 
-export default function App({ Component, pageProps }) {
+function App({ Component, pageProps }) {
 
   const [loading, setLoading] = useState(true)
   useIsomorphicLayoutEffect(()=>{
@@ -34,3 +35,5 @@ export default function App({ Component, pageProps }) {
 
   )
 }
+
+export default appWithTranslation(App);

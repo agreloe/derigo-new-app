@@ -4,7 +4,7 @@
     overflow: hidden;
     position: relative;
     height: 100%;
-    
+
 
     &__inner {
         white-space: nowrap;
@@ -91,7 +91,7 @@
     @include small-screen {
         &__content {
             &__body {
-                width: 250px;
+                width: 300px;
             }
 
             &__arrow {

@@ -5,23 +5,26 @@ import { gsap, Expo } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import useIsomorphicLayoutEffect from '@/utils/isomorphicLayoutEffect';
 import SplitType from 'split-type'
+import { useTranslation } from "next-i18next";
+
 
 export default function Nosotros() {
+  const { t } = useTranslation();
     const cards = [
         {
             "icon":"https://img.icons8.com/ios/100/3e4ba3/service--v1.png",
-            "title":"Experiencia",
-            "text":"Hemos llevado a cabo la Ingeniería, Instalación y Puesta en Marcha de los más importantes Centros de Distribución del país.",
+            "title": t("nosotros.Nosotros experienceTitle"),
+            "text": t("nosotros.Nosotros experienceText"),
         },
         {
             "icon":"https://img.icons8.com/ios/100/3e4ba3/environment-care.png",
-            "title":"Ahorro energético",
-            "text":"Trabajamos con tecnologías Green High Efficiency basadas en la aplicación de estrategias de ahorro energético como Low Condensing y Hot Gas Defrost, con las cuales hemos logrado un ahorro de energía de más del 30%.",
+            "title": t("nosotros.Nosotros energyTitle"),
+            "text": t("nosotros.Nosotros energyText"),
         },
         {
             "icon":"https://img.icons8.com/ios/100/3e4ba3/approval.png",
-            "title":"Respresentación Internacional",
-            "text":"Contamos con la respresentación oficial en Argentina de Weber Cooling, empresa de los Países Bajos dedicada a la fabricación de cámaras de enfriamiento al vacío.",
+            "title": t("nosotros.Nosotros representationTitle"),
+            "text": t("nosotros.Nosotros representationText"),
         },
     ]
     const nosotros = useRef()
@@ -29,6 +32,9 @@ export default function Nosotros() {
     gsap.registerPlugin(ScrollTrigger);
     const tl = useRef()
     const ctx = useRef()
+
+
+
 
     useIsomorphicLayoutEffect(()=>{
         const text = new SplitType(q('.title'), { types: 'words' })
@@ -124,10 +130,10 @@ export default function Nosotros() {
     <section id='nosotros' ref={nosotros} className={`${styles.nosotros}`}>
         <div className="container flex items-center justify-between gap-8 sm:flex-wrap sm:justify-center py-16">
             <div className='w-[50%] sm:w-[100%]'>
-                <h2 className='title'>Sobre nosotros</h2>
-                <p className="subtitle">Nuestra trayectoria</p>
+                <h2 className='title'>{t("nosotros.Nosotros title")}</h2>
+                <p className="subtitle">{t("nosotros.Nosotros subtitle")}</p>
                 <span className={`my-12 sm:my-8 line`}></span>
-                <p className='text'>Con más de 40 años de experiencia en instalaciones Frigoríficas, estamos ubicados en el primer lugar en Argentina en lo que se refiere a ejecución de Obras con compresores a Tornillo.</p>
+                <p className='text'>{t("nosotros.Nosotros description")}</p>
 
             </div>
             <Image className={`${styles.img} img`} src={'https://ik.imagekit.io/c9tj2d0xqow/tr:w-auto/DSC_0294_2_0z4TqMwtN.jpg'} alt="Foto de obra de compresor a tornillo" width={0} height={0} sizes="100vw"></Image>
@@ -147,3 +153,5 @@ export default function Nosotros() {
     </section>
   )
 }
+
+

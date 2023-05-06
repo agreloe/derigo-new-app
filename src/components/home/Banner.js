@@ -1,5 +1,6 @@
 import React, {useRef} from 'react'
 import Carousel, { CarouselItem } from '../Carousel'
+import { useTranslation } from "next-i18next";
 
 export default function Banner() {
     const slides = [
@@ -13,9 +14,10 @@ export default function Banner() {
             "img":"https://ik.imagekit.io/c9tj2d0xqow/tr:w-auto/2008-wallmart-moreno-3_CH6s1X4D6.jpg"
         },
     ]
+    const { t } = useTranslation();
   return (
     <section className='mt-[80px]'>
-        <Carousel slides={1} width={100} text={`Soluciones en frío`} description={`Con el mayor ahorro energético y la mejor tecnología en frío`}>
+        <Carousel slides={1} width={100} text={t("banner.Banner title")} description={t("banner.Banner subtitle")}>
             {
                 slides.map((slide, index)=>(
                     <CarouselItem

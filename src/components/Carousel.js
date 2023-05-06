@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import useIsomorphicLayoutEffect from '@/utils/isomorphicLayoutEffect';
 import SplitType from 'split-type'
 
+
 export const CarouselItem = ({img, height, width, brightness, text}) => {
     return (
       <div className={`${styles["carousel__inner__item"]}`} style={{backgroundImage:`url("${img}")`, height:`${height}`, width:`${width}`, filter:`brightness(${brightness})`}}>
