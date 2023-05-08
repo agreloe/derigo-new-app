@@ -17,13 +17,13 @@ export default function Banner() {
     const { t } = useTranslation();
   return (
     <section className='mt-[80px]'>
-        <Carousel slides={1} width={100} text={t("banner.Banner title")} description={t("banner.Banner subtitle")}>
+        <Carousel slides={1} width={100} text={t("banner.Banner title")} description={t("banner.Banner subtitle")} height="60vh">
             {
                 slides.map((slide, index)=>(
                     <CarouselItem
                         key={index}
                         img={slide.img}
-                        height="60vh"
+
                         width="100%"
                         gradientColor="rgba(255, 255, 255, 0)"
                         brightness={0.5}

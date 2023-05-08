@@ -6,9 +6,9 @@ import useIsomorphicLayoutEffect from '@/utils/isomorphicLayoutEffect';
 import SplitType from 'split-type'
 
 
-export const CarouselItem = ({img, height, width, brightness, text}) => {
+export const CarouselItem = ({img, width, brightness, text}) => {
     return (
-      <div className={`${styles["carousel__inner__item"]}`} style={{backgroundImage:`url("${img}")`, height:`${height}`, width:`${width}`, filter:`brightness(${brightness})`}}>
+      <div className={`${styles["carousel__inner__item"]}`} style={{backgroundImage:`url("${img}")`, width:`${width}`, filter:`brightness(${brightness})`}}>
         {text && (
           <p className={`${styles["carousel__inner__item__text"]}`}>{text}</p>
         )}
@@ -16,7 +16,7 @@ export const CarouselItem = ({img, height, width, brightness, text}) => {
       );
 };
 
-export default function Carousel({children, slides, width, text, description}) {
+export default function Carousel({children, slides, width, text, description, height}) {
     const carousel = useRef()
     const q = gsap.utils.selector(carousel);
     gsap.registerPlugin(ScrollTrigger);
@@ -83,7 +83,7 @@ export default function Carousel({children, slides, width, text, description}) {
     };
   return (
     <div ref={carousel} className={`${styles.carousel}`}>
-        <div className={`${styles["carousel__inner"]}`} style={{transform: `translateX(-${activeIndex * width}%`}}>
+        <div className={`${styles["carousel__inner"]}`} style={{transform: `translateX(-${activeIndex * width}%` , height: `${height}`}}>
             {Children.map(children, child => {
                 return cloneElement(child);
             })}
