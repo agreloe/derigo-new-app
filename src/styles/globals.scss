@@ -123,6 +123,41 @@ a {
 .line {
   @include line($secondary-color);
 }
+.cursor-pointer {
+  width: 50px;
+
+  .es {
+    &::after {
+      background-image: url('https://images.emojiterra.com/twitter/v13.1/512px/1f1ea-1f1f8.png');
+    }
+  }
+
+  .en {
+    &::after {
+      background-image: url('https://images.emojiterra.com/twitter/512px/1f1fa-1f1f8.png');
+    }
+  }
+
+  .en,
+  .es {
+    position: relative;
+    &::after {
+      content: '';
+      width: 19.8px;
+      height: 20px;
+      background-position: 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      bottom: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
 
 @include small-screen {
 

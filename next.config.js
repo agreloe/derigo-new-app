@@ -89,6 +89,12 @@ module.exports = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.emojiterra.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 
