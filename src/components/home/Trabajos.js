@@ -163,16 +163,16 @@ export default function Trabajos() {
 
     const images = [
       {
-          'url':'https://pertutti.com.ar/wp-content/uploads/2021/10/Logo.png'
+          'url':'https://upload.wikimedia.org/wikipedia/commons/d/d3/Logo_Jumbo_Cencosud.png'
       },
       {
-          'url':'https://beta.iflow21.com/wp-content/uploads/2020/11/IflowLogosolo.png'
+          'url':'https://upload.wikimedia.org/wikipedia/commons/f/fc/Logo_Vea_Cencosud.png'
       },
       {
           'url':'https://1000marcas.net/wp-content/uploads/2020/11/Carrefour-Logo.png'
       },
       {
-          'url':'https://cdn.freebiesupply.com/logos/thumbs/2x/pf-changs-logo-logo.png'
+          'url':'https://upload.wikimedia.org/wikipedia/commons/3/3e/Norte.png'
       },
       {
           'url':'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Walmart_logo.svg/2560px-Walmart_logo.svg.png'
@@ -184,7 +184,7 @@ export default function Trabajos() {
           'url':'https://www.dogoseguridad.com.ar/images/logos-clientes/logo1.png'
       },
       {
-          'url':'https://www.deananddennys.com/contenidos/1611864738.png'
+          'url':'https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Disco-Supermarket-Logo.svg/1200px-Disco-Supermarket-Logo.svg.png'
       },
       {
           'url':'https://logos-world.net/wp-content/uploads/2022/04/Dia-Emblem.png'
