@@ -15,12 +15,11 @@
 
 :root {
   @include body($paragraph, $text-color);
-  scroll-padding-top: 4rem;
+  //scroll-padding-top: 4rem;
 }
 
 html {
-  --scroll-behavior: smooth!important;
-  scroll-behavior: smooth!important;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -51,7 +50,7 @@ body.opacity::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    overscroll-behavior: none;
+    //overscroll-behavior: none;
 }
 
 h1 {

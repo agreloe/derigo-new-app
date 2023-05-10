@@ -14,7 +14,7 @@ export default function Home() {
   const { t } = useTranslation();
   return (
     <Fragment>
-      <Head>
+      <ScrollRestorationDisabler>
       <title>
             {t("metadata.Metadata title")}
           </title>
@@ -34,7 +34,8 @@ export default function Home() {
             property="og:image"
             content="https://ik.imagekit.io/c9tj2d0xqow/tr:w-auto/derigo-meta-img_BttwDMO22.png"
           />
-      </Head>
+      </ScrollRestorationDisabler>
+      
       <Banner />
       <Nosotros />
       <Trabajos />
