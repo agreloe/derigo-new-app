@@ -4,6 +4,7 @@ import ScrollRestorationDisabler from '@/utils/scrollRestorationDisabler'
 export default function Document() {
   return (
     <Html lang="en">
+      <Head></Head>
       <ScrollRestorationDisabler>
       <meta
             name="title"
@@ -23,7 +24,7 @@ export default function Document() {
           />
 
       </ScrollRestorationDisabler>
-      
+
       <body>
         <Main />
         <NextScript />
