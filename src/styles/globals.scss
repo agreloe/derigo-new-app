@@ -15,7 +15,7 @@
 
 :root {
   @include body($paragraph, $text-color);
-  //scroll-padding-top: 4rem;
+  scroll-padding-top: 4rem;
 }
 
 html {
