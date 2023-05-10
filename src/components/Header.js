@@ -61,17 +61,17 @@ export default function Header() {
           className={`flex items-center gap-4 ${!toggle ? "" : styles.active}`}
         >
             <li onClick={closeMenu}>
-                <Link href={`/#${t("nosotros.Nosotros route")}`} >
+                <Link href={`/#${t("nosotros.Nosotros route")}`} scroll={false} >
                 {t("header.Header about")}
                 </Link>
             </li>
             <li onClick={closeMenu}>
-                <Link href={`/#${t("trabajos.Trabajos route")}`} >
+                <Link href={`/#${t("trabajos.Trabajos route")}`} scroll={false}>
                 {t("header.Header work")}
                 </Link>
             </li>
             <li onClick={closeMenu}>
-                <Link href={`/#${t("contacto.Contacto route")}`} >
+                <Link href={`/#${t("contacto.Contacto route")}`} scroll={false}>
                 {t("header.Header contact")}
                 </Link>
             </li>
