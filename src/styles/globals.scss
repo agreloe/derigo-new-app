@@ -16,10 +16,11 @@
 :root {
   @include body($paragraph, $text-color);
   scroll-padding-top: 4rem;
+}
 
-  --total-brands: 6;
-  --logo-width: 12rem;
-  --total-logo-width: calc(var(--total-brands) * var(var(--logo-width)) * 2);
+html {
+  --scroll-behavior: smooth!important;
+  scroll-behavior: smooth!important;
 }
 
 body {
