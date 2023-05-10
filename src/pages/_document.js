@@ -1,11 +1,9 @@
 import { Html, Head, Main, NextScript } from 'next/document'
-import ScrollRestorationDisabler from '@/utils/scrollRestorationDisabler'
 
 export default function Document() {
   return (
     <Html lang="en">
-      <Head></Head>
-      <ScrollRestorationDisabler>
+      <Head>
       <meta
             name="title"
             content="Instalaciones de frío con la mejor tecnología y mayor ahorro energético | DeRigo Argentina"
@@ -22,8 +20,7 @@ export default function Document() {
             property="og:image"
             content="https://ik.imagekit.io/c9tj2d0xqow/tr:w-auto/derigo-meta-img_BttwDMO22.png"
           />
-
-      </ScrollRestorationDisabler>
+      </Head>
 
       <body>
         <Main />
