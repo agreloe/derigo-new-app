@@ -25,7 +25,7 @@
         -o-transition: $transition;
 
         li {
-            a {
+            button, a {
                 position: relative;
 
                 &::after {
@@ -57,13 +57,13 @@
         }
     }
 
-    button {
+    .hamburger {
         display: none;
     }
 
     @include small-screen {
 
-        button {
+        .hamburger {
             color: transparent;
             position: absolute;
             right: 1rem;

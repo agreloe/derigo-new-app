@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from '@/styles/Header.module.scss'
@@ -6,12 +6,16 @@ import logo from '@/assets/img/Derigo_logo_Redesign.svg'
 import useIsomorphicLayoutEffect from "@/utils/isomorphicLayoutEffect";
 import LocaleSwitcher from '../components/LocaleSwitcher'
 import { useTranslation } from "next-i18next";
+import ScrollToButton from './ScrollToButton'
+
 
 export default function Header() {
   const { t } = useTranslation();
   const [toggle, setToggle] = useState(false);
   const [visible, setVisible] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
+
+
 
   const handleScroll = () => {
       const currentScrollPos = window.scrollY;
@@ -37,11 +41,10 @@ export default function Header() {
   };
 
   useIsomorphicLayoutEffect(()=>{
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   },[prevScrollPos, visible, handleScroll])
-
-
 
   return (
     <header className={`${styles.header}`}>
@@ -53,31 +56,32 @@ export default function Header() {
         <button
           id="button"
           onClick={openMenu}
-          className={`${!toggle ? "" : styles.open}`}
+          className={`${styles.hamburger} ${!toggle ? "" : styles.open}`}
         >
           <span></span>
         </button>
         <ul
-          className={`flex items-center gap-4 ${!toggle ? "" : styles.active}`}
+          className={`nav-items flex items-center gap-4 ${!toggle ? "" : styles.active}`}
         >
             <li onClick={closeMenu}>
-                <Link href={`/#${t("nosotros.Nosotros route")}`} scroll={false} >
-                {t("header.Header about")}
-                </Link>
+                <ScrollToButton toId={`${t("nosotros.Nosotros route")}`} duration={750}>
+                  {t("header.Header about")}
+                </ScrollToButton>
             </li>
             <li onClick={closeMenu}>
-                <Link href={`/#${t("trabajos.Trabajos route")}`} scroll={false}>
+                <ScrollToButton toId={`${t("trabajos.Trabajos route")}`} duration={750}>
                 {t("header.Header work")}
-                </Link>
+                </ScrollToButton>
             </li>
             <li onClick={closeMenu}>
-                <Link href={`/#${t("contacto.Contacto route")}`} scroll={false}>
+                <ScrollToButton toId={`${t("contacto.Contacto route")}`} duration={750}>
                 {t("header.Header contact")}
-                </Link>
+                </ScrollToButton>
             </li>
             <li onClick={closeMenu}>
               <LocaleSwitcher />
             </li>
+
         </ul>
         </nav>
       </div>
