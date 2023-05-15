@@ -26,7 +26,7 @@ export default function Trabajos() {
 
           ctx.current = gsap.context(()=>{
               tl.current = gsap
-              .timeline()
+              .timeline({defaults:{duration:0.5, ease: Expo.easeOut}})
               .fromTo(
                 words,
                 {
@@ -36,8 +36,8 @@ export default function Trabajos() {
                 {
                   y: 0,
                   opacity: 1,
-                  stagger: 0.2,
-                  ease: Expo.easeOut
+                  stagger: 0.25,
+
                 }
               )
               .fromTo(
@@ -49,15 +49,15 @@ export default function Trabajos() {
                 {
                   y: 0,
                   opacity: 1,
-                  ease: Expo.easeOut
-                }, '-=0.4'
+
+                }, "<50%"
               )
               .to(
                 q('.line1'),
                 {
                   width: 100,
-                  ease: Expo.easeOut
-                }, '-=0.4'
+
+                }, "<50%"
               )
               .fromTo(
                 q('.box'),
@@ -68,9 +68,9 @@ export default function Trabajos() {
                 {
                     y: 0,
                     opacity: 1,
-                    stagger: 0.2,
-                    ease: Expo.easeOut
-                }, '-=0.4'
+                    stagger: 0.25,
+
+                }, "<50%"
               )
               .fromTo(
                 wordSubtitle,
@@ -82,8 +82,8 @@ export default function Trabajos() {
                   y: 0,
                   opacity: 1,
                   stagger: 0.25,
-                  ease: Expo.easeOut
-                }, '-=0.4'
+
+                }, "<50%"
               )
               .fromTo(
                 q('.subtitle2'),
@@ -94,26 +94,26 @@ export default function Trabajos() {
                 {
                   y: 0,
                   opacity: 1,
-                  ease: Expo.easeOut
-                }, '-=0.4'
+
+                }, "<50%"
               )
               .to(
                 q('.line2'),
                 {
                   width: 100,
-                  ease: Expo.easeOut
-                }, '-=0.4'
+
+                }, "<50%"
                 )
                 .fromTo(
                   q('.slider'),
                   {
                     opacity: 0,
-                    ease: Expo.easeOut
+
                   },
                   {
                     opacity: 1,
-                    ease: Expo.easeOut
-                  }, '-=0.4'
+
+                  }, "<50%"
               )
             }, trabajos)
 

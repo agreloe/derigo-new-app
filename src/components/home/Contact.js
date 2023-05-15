@@ -50,7 +50,7 @@ export default function Contact() {
 
         ctx.current = gsap.context(()=>{
             tl.current = gsap
-            .timeline()
+            .timeline({defaults: {duration: 0.5, ease: Expo.easeOut}})
             .fromTo(
               words,
               {
@@ -60,9 +60,7 @@ export default function Contact() {
               {
                 y: 0,
                 opacity: 1,
-                stagger: 0.2,
-                //duration: 1,
-                ease: Expo.easeOut
+                stagger: 0.25,
               }
             )
             .fromTo(
@@ -74,15 +72,13 @@ export default function Contact() {
               {
                 y: 0,
                 opacity: 1,
-                ease: Expo.easeOut
-              }, '-=1'
+              }, '<50%'
             )
             .to(
               q('.line'),
               {
                 width: 100,
-                ease: Expo.easeOut
-              }, '-=0.4'
+              }, '<50%'
             )
             .fromTo(
               q('.form'),
@@ -93,8 +89,7 @@ export default function Contact() {
               {
                 y: 0,
                 opacity: 1,
-                ease: Expo.easeOut
-              }, '-=0.4'
+              }, '<50%'
             )
           }, contact)
 

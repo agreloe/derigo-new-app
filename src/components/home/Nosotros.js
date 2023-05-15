@@ -42,7 +42,7 @@ export default function Nosotros() {
 
         ctx.current = gsap.context(()=>{
             tl.current = gsap
-            .timeline()
+            .timeline({defaults:{duration:0.5, ease: Expo.easeOut}})
             .fromTo(
               words,
               {
@@ -52,8 +52,7 @@ export default function Nosotros() {
               {
                 y: 0,
                 opacity: 1,
-                stagger: 0.2,
-                ease: Expo.easeOut
+                stagger: 0.25
               }
             )
             .fromTo(
@@ -64,17 +63,14 @@ export default function Nosotros() {
               },
               {
                 y: 0,
-                opacity: 1,
-                ease: Expo.easeOut
-              }, '-=0.4'
+                opacity: 1
+              }, '<50%'
             )
-
             .to(
               q('.line'),
               {
-                width: 100,
-                ease: Expo.easeOut
-              }, '-=0.4'
+                width: 100
+              }, '<50%'
             )
             .fromTo(
                 q('.text'),
@@ -85,8 +81,7 @@ export default function Nosotros() {
                 {
                     y: 0,
                     opacity: 1,
-                    ease: Expo.easeOut
-                }, '-=0.4'
+                }, '<50%'
             )
             .fromTo(
                 q('.img'),
@@ -97,8 +92,7 @@ export default function Nosotros() {
                 {
                     y: 0,
                     opacity: 1,
-                    ease: Expo.easeOut
-                }, '-=0.4'
+                }, '<50%'
             )
             .fromTo(
                 q('.card'),
@@ -109,9 +103,8 @@ export default function Nosotros() {
                 {
                   y: 0,
                   opacity: 1,
-                  stagger: 0.2,
-                  ease: Expo.easeOut
-                }, '-=0.4'
+                  stagger: 0.25,
+                }, '<50%'
               )
 
         }, nosotros)

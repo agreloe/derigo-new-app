@@ -30,7 +30,7 @@ export default function Carousel({children, slides, width, text, description, he
 
         ctx.current = gsap.context(()=>{
             tl.current = gsap
-            .timeline()
+            .timeline({defaults:{duration: 0.5, ease: Expo.easeOut}})
             .fromTo(
               words,
               {
@@ -40,8 +40,7 @@ export default function Carousel({children, slides, width, text, description, he
               {
                 y: 0,
                 opacity: 1,
-                stagger: 0.2,
-                ease: Expo.easeOut
+                stagger: 0.25
               }
             )
             .fromTo(
@@ -52,9 +51,8 @@ export default function Carousel({children, slides, width, text, description, he
               },
               {
                 y: 0,
-                opacity: 1,
-                ease: Expo.easeOut
-              }, '-=0.4'
+                opacity: 1
+              }, '<50%'
             )
           }, carousel)
 
