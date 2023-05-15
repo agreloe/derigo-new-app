@@ -58,7 +58,7 @@ export default function Header() {
           onClick={openMenu}
           className={`${styles.hamburger} ${!toggle ? "" : styles.open}`}
         >
-          <span></span>
+          <span>Menu</span>
         </button>
         <ul
           className={`nav-items flex items-center gap-4 ${!toggle ? "" : styles.active}`}

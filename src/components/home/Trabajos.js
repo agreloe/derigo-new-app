@@ -36,9 +36,9 @@ export default function Trabajos() {
                 {
                   y: 0,
                   opacity: 1,
-                  stagger: 0.25,
+                  stagger: 0.2,
                   ease: Expo.easeOut
-                }, '-=0.25'
+                }
               )
               .fromTo(
                 q('.subtitle1'),
@@ -50,14 +50,14 @@ export default function Trabajos() {
                   y: 0,
                   opacity: 1,
                   ease: Expo.easeOut
-                }, '-=0.25'
+                }, '-=0.4'
               )
               .to(
                 q('.line1'),
                 {
                   width: 100,
                   ease: Expo.easeOut
-                }, '-=0.25'
+                }, '-=0.4'
               )
               .fromTo(
                 q('.box'),
@@ -68,9 +68,9 @@ export default function Trabajos() {
                 {
                     y: 0,
                     opacity: 1,
-                    stagger: 0.25,
+                    stagger: 0.2,
                     ease: Expo.easeOut
-                }, '-=0.25'
+                }, '-=0.4'
               )
               .fromTo(
                 wordSubtitle,
@@ -83,7 +83,7 @@ export default function Trabajos() {
                   opacity: 1,
                   stagger: 0.25,
                   ease: Expo.easeOut
-                }, '-=0.25'
+                }, '-=0.4'
               )
               .fromTo(
                 q('.subtitle2'),
@@ -95,14 +95,14 @@ export default function Trabajos() {
                   y: 0,
                   opacity: 1,
                   ease: Expo.easeOut
-                }, '-=0.25'
+                }, '-=0.4'
               )
               .to(
                 q('.line2'),
                 {
                   width: 100,
                   ease: Expo.easeOut
-                }, '-=0.25'
+                }, '-=0.4'
                 )
                 .fromTo(
                   q('.slider'),
@@ -113,7 +113,7 @@ export default function Trabajos() {
                   {
                     opacity: 1,
                     ease: Expo.easeOut
-                  }, '-=0.5'
+                  }, '-=0.4'
               )
             }, trabajos)
 

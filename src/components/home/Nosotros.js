@@ -52,7 +52,7 @@ export default function Nosotros() {
               {
                 y: 0,
                 opacity: 1,
-                stagger: 0.25,
+                stagger: 0.2,
                 ease: Expo.easeOut
               }
             )
@@ -66,7 +66,7 @@ export default function Nosotros() {
                 y: 0,
                 opacity: 1,
                 ease: Expo.easeOut
-              }, '-=0.25'
+              }, '-=0.4'
             )
 
             .to(
@@ -74,7 +74,7 @@ export default function Nosotros() {
               {
                 width: 100,
                 ease: Expo.easeOut
-              }, '-=0.25'
+              }, '-=0.4'
             )
             .fromTo(
                 q('.text'),
@@ -86,7 +86,7 @@ export default function Nosotros() {
                     y: 0,
                     opacity: 1,
                     ease: Expo.easeOut
-                }, '-=0.25'
+                }, '-=0.4'
             )
             .fromTo(
                 q('.img'),
@@ -98,7 +98,7 @@ export default function Nosotros() {
                     y: 0,
                     opacity: 1,
                     ease: Expo.easeOut
-                }, '-=0.25'
+                }, '-=0.4'
             )
             .fromTo(
                 q('.card'),
@@ -109,9 +109,9 @@ export default function Nosotros() {
                 {
                   y: 0,
                   opacity: 1,
-                  stagger: 0.25,
+                  stagger: 0.2,
                   ease: Expo.easeOut
-                }, '-=0.25'
+                }, '-=0.4'
               )
 
         }, nosotros)

@@ -40,7 +40,7 @@ export default function Carousel({children, slides, width, text, description, he
               {
                 y: 0,
                 opacity: 1,
-                stagger: 0.25,
+                stagger: 0.2,
                 ease: Expo.easeOut
               }
             )
@@ -54,7 +54,7 @@ export default function Carousel({children, slides, width, text, description, he
                 y: 0,
                 opacity: 1,
                 ease: Expo.easeOut
-              }, '-=0.25'
+              }, '-=0.4'
             )
           }, carousel)
 

@@ -60,7 +60,7 @@ export default function Contact() {
               {
                 y: 0,
                 opacity: 1,
-                stagger: 0.15,
+                stagger: 0.2,
                 //duration: 1,
                 ease: Expo.easeOut
               }
@@ -75,14 +75,14 @@ export default function Contact() {
                 y: 0,
                 opacity: 1,
                 ease: Expo.easeOut
-              }, '-=0.25'
+              }, '-=1'
             )
             .to(
               q('.line'),
               {
                 width: 100,
                 ease: Expo.easeOut
-              }, '-=0.25'
+              }, '-=0.4'
             )
             .fromTo(
               q('.form'),
@@ -94,7 +94,7 @@ export default function Contact() {
                 y: 0,
                 opacity: 1,
                 ease: Expo.easeOut
-              }, '-=0.25'
+              }, '-=0.4'
             )
           }, contact)
 
