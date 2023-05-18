@@ -137,7 +137,7 @@ export default function Nosotros() {
                 cards.map((card, index)=>(
                     <div key={index} className={`${styles.card} card`}>
                         <Image src={card.icon} width={64} height={64} alt='Imagen de icono decorativo'></Image>
-                        <h4>{card.title}</h4>
+                        <h3>{card.title}</h3>
                         <p>{card.text}</p>
                     </div>
                 ))

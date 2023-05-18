@@ -8,7 +8,7 @@
 
 
         &__title {
-            h4 {
+            h3 {
                 padding: 1rem;
                 /* display: flex;
                 justify-content: space-between; */
@@ -39,7 +39,7 @@
         }
 
         &.rotate {
-            h4 {
+            h3 {
 
                 &::after {
                     transform: rotateZ(-90deg);
@@ -60,18 +60,17 @@
             padding-right: 1rem;
 
             p {
-
-                opacity: 0;
                 transform: translateY(25px);
+                opacity: 0;
             }
 
             &__img {
                 transition: $transition;
                 object-fit: cover;
+                opacity: 0;
             }
 
             &.active {
-                transition: $transition;
                 height: auto;
                 opacity: 1;
                 padding-bottom: 2rem;
@@ -85,9 +84,9 @@
                 .box__content__img {
                     width: auto;
                     height: 300px;
-                    transition: $transition;
                     transform-origin: 0 100%;
                     transform-style: preserve-3d;
+                    opacity: 1;
                 }
             }
 

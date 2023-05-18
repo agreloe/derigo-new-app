@@ -212,7 +212,7 @@ export default function Trabajos() {
 
                         <div key={index} className={`box w-full ${styles.box}`} onClick={()=>onSelectedRow(index)}>
                             <div className={`${styles['box__title']} ${open && selectedRow === index ? `${styles.rotate}` : ``}`}>
-                                <h4>{item.title}</h4>
+                                <h3>{item.title}</h3>
                             </div>
                             <div className={`${styles["box__content"]} ${open && selectedRow === index ? `${styles.active}` : ``}`}>
                                 <p>{item.text}</p>

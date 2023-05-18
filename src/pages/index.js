@@ -1,12 +1,9 @@
 import React, { Fragment } from "react"
 import ScrollRestorationDisabler from "@/utils/scrollRestorationDisabler"
 import Banner from "@/components/home/Banner"
-import About from "@/components/home/About"
-import Work from "@/components/home/Work"
 import Contact from "@/components/home/Contact"
 import Nosotros from "@/components/home/Nosotros"
 import Trabajos from "@/components/home/Trabajos"
-import Head from "next/head"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 
@@ -18,6 +15,12 @@ export default function Home() {
       <title>
             {t("metadata.Metadata title")}
           </title>
+          <link rel='canonical' href='https://derigoargentina.com/' />
+          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+          <meta name="theme-color" content="#f8f8ff" />
           <meta
             name="title"
             content={`${t("metadata.Metadata title")}`}
@@ -35,7 +38,7 @@ export default function Home() {
             content="https://ik.imagekit.io/c9tj2d0xqow/tr:w-auto/derigo-meta-img_BttwDMO22.png"
           />
       </ScrollRestorationDisabler>
-      
+
       <Banner />
       <Nosotros />
       <Trabajos />
