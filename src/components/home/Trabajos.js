@@ -212,7 +212,9 @@ export default function Trabajos() {
 
                         <div key={index} className={`box w-full ${styles.box}`} onClick={()=>onSelectedRow(index)}>
                             <div className={`${styles['box__title']} ${open && selectedRow === index ? `${styles.rotate}` : ``}`}>
-                                <h3>{item.title}</h3>
+                                <h3>
+                                  <span className='sm:w-[80%] block'>{item.title}</span>
+                                </h3>
                             </div>
                             <div className={`${styles["box__content"]} ${open && selectedRow === index ? `${styles.active}` : ``}`}>
                                 <p>{item.text}</p>
@@ -223,7 +225,7 @@ export default function Trabajos() {
                 }
             </div>
 
-            <h3 className='pt-16 title2'>{t("trabajos.Trabajos clientsTitle")}</h3>
+            <h3 className='pt-16 title2 text-[1.77rem]'>{t("trabajos.Trabajos clientsTitle")}</h3>
             <p className='subtitle subtitle2'>{t("trabajos.Trabajos clientsSubtitle")}</p>
             <span className={`my-12 sm:my-8 line line2`}></span>
 

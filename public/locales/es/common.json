@@ -37,7 +37,9 @@
     "Contacto formName": "Nombre",
     "Contacto formEmail": "Email",
     "Contacto formMessage": "Mensaje",
-    "Contacto formSuccess": "Tu mensaje se envió con éxito",
+    "Contacto modalTitle": "Muchas gracias",
+    "Contacto modalMsg": "Pronto nos pondremos en contacto",
+    "Contacto modalBtn": "Volver",
     "Contacto button": "Enviar"
   },
   "footer": {
