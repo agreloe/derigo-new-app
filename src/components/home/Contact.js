@@ -23,7 +23,7 @@ export default function Contact() {
     const name = useRef();
     const email = useRef();
     const msg = useRef();
-    init("fmCoPVvWrO9k_JDN5");
+    init("Your_key");
 
     const [open, setOpen] = useState(false)
 
