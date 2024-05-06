@@ -176,10 +176,10 @@ export default function Contact() {
 
         emailjs
           .sendForm(
-            "service_w24f2pr",
-            "derigo-next-form",
+            process.env.NEXT_PUBLIC_SERVICE_ID,
+            process.env.NEXT_PUBLIC_TEMPLATE_ID,
             form.current,
-            "fmCoPVvWrO9k_JDN5"
+            process.env.NEXT_PUBLIC_CLIENT_ID
           )
           .then(
             (result) => {

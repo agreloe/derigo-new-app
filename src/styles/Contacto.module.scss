@@ -55,6 +55,7 @@
     @include small-screen {
         .modal-content {
             width: 80%;
+            height: fit-content;
             flex-direction: column;
 
             .modal-text{
